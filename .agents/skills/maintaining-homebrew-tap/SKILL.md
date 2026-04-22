@@ -94,16 +94,17 @@ end
 ```sh
 brew install zlliang/tap/<name>
 brew test zlliang/tap/<name>
+brew style Formula/<name>.rb
 brew audit --strict --online zlliang/tap/<name>
 ```
 
-Fix any issues reported by `brew audit` before committing.
+Fix any issues before committing.
 
 ## Updating a formula to a new version
 
 1. Update `version` (and `url` if not using `#{version}` interpolation)
 2. Recompute and replace all `sha256` values
-3. Run `brew audit` and `brew test`
+3. Run `brew style`, `brew test`, and `brew audit`
 
 ## Versioned formulae
 
@@ -136,7 +137,7 @@ Before committing:
 - [ ] `desc`, `homepage`, `license` are filled and accurate
 - [ ] `sha256` checksums verified against downloaded artifacts
 - [ ] `test do` block exercises actual functionality
-- [ ] `brew audit --strict --online` passes
+- [ ] `brew style` and `brew audit --strict --online` pass
 
 ## References
 

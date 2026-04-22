@@ -15,7 +15,7 @@ This repository is a [Homebrew tap](https://docs.brew.sh/Taps) — a third-party
 - Follow Homebrew's Ruby style ([Formula Cookbook](https://docs.brew.sh/Formula-Cookbook)).
 - Always include: `desc`, `homepage`, `url`, `sha256`, `license`.
 - Use `#{version}` interpolation in download URLs.
-- Run `brew audit --strict --online <formula>` before committing.
+- Before committing, run `brew style`, `brew test`, and `brew audit --strict --online`.
 - Commit messages: `<name>: add formula` or `<name>: update to <version>`.
 
 ## Skills
