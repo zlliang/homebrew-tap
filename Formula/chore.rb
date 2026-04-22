@@ -1,26 +1,26 @@
 class Chore < Formula
   desc "Task runner for repetitive daily chores"
   homepage "https://github.com/zlliang/chore"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/zlliang/chore/releases/download/v#{version}/chore_#{version}_darwin_arm64.tar.gz"
-      sha256 "edfdeaa348b709c42134ed4df8b138257ddf47de6f7c1080fd6d04c2ce5bc922"
+      sha256 "3b1c952ee1f3925fddf424a0000d551005858e1c62451363a02e09dddb5c8efb"
     elsif Hardware::CPU.intel?
       url "https://github.com/zlliang/chore/releases/download/v#{version}/chore_#{version}_darwin_amd64.tar.gz"
-      sha256 "bd62253a96d5212ff528cd8971935adea7adfa66be0aa83c93ca050d167f20a0"
+      sha256 "7a00eae218c8acb5c32ec9da3e89d41d878536200c93985aec9456dbce1afba4"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/zlliang/chore/releases/download/v#{version}/chore_#{version}_linux_arm64.tar.gz"
-      sha256 "388ba0832d2f495d191bb83e1271167e2db4e40c97b685a027680deae3c7bf98"
+      sha256 "80a9bf46c376d775c43048f2f9e6647ccd6a9ca2b85512ea24152d9c199ba18c"
     elsif Hardware::CPU.intel?
       url "https://github.com/zlliang/chore/releases/download/v#{version}/chore_#{version}_linux_amd64.tar.gz"
-      sha256 "e7a0405f0931509d7f5b1a3cb24e6a0c8858e946d39ee20883cf4da83945f3c7"
+      sha256 "061b725e0a006f012f46f604afbff5ce561be433b877376f93ae1ef03e219e15"
     end
   end
 
