@@ -15,3 +15,4 @@ brew install <formula>
 
 | Formula | Description |
 |---------|-------------|
+| `chore` | Task runner for repetitive daily chores |
