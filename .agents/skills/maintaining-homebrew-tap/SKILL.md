@@ -5,6 +5,19 @@ description: "Maintaining a Homebrew tap: adding formulae, updating versions, co
 
 # Maintaining a Homebrew Tap
 
+## Local development setup
+
+Homebrew reads formulae from its tap directory (`/opt/homebrew/Library/Taps/zlliang/homebrew-tap`), not from our workspace. To make local edits immediately visible to `brew`, the tap directory must be a **symlink** to our workspace:
+
+```sh
+rm -rf "$(brew --repository zlliang/tap)"
+ln -s "$(git rev-parse --show-toplevel)" "$(brew --repository zlliang/tap)"
+```
+
+Verify with: `ls -la /opt/homebrew/Library/Taps/zlliang/`
+
+This only needs to be done once. If `brew tap` recreates the directory (e.g. after `brew untap`), re-run the symlink command.
+
 ## Adding a new formula
 
 ### Step 1: Gather information
@@ -93,8 +106,8 @@ end
 
 ```sh
 brew install zlliang/tap/<name>
-brew test zlliang/tap/<name>
 brew style Formula/<name>.rb
+brew test zlliang/tap/<name>
 brew audit --strict --online zlliang/tap/<name>
 ```
 
@@ -104,7 +117,14 @@ Fix any issues before committing.
 
 1. Update `version` (and `url` if not using `#{version}` interpolation)
 2. Recompute and replace all `sha256` values
-3. Run `brew style`, `brew test`, and `brew audit`
+3. Reinstall and verify:
+
+```sh
+brew reinstall zlliang/tap/<name>
+brew style Formula/<name>.rb
+brew test zlliang/tap/<name>
+brew audit --strict --online zlliang/tap/<name>
+```
 
 ## Versioned formulae
 
