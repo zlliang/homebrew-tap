@@ -3,6 +3,7 @@ class Chore < Formula
   homepage "https://github.com/zlliang/chore"
   version "0.1.4"
   license "MIT"
+  deprecate! date: "2026-07-12", because: :repo_archived
 
   on_macos do
     if Hardware::CPU.arm?
