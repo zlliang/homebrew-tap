@@ -3,7 +3,7 @@ name: maintaining-homebrew-tap
 description: "Maintaining a Homebrew tap: adding formulae, updating versions, computing SHA256 checksums, writing Ruby formula files, auditing, and testing. Use when asked to add a formula, update a formula version, bump a package, or perform any Homebrew tap maintenance."
 ---
 
-# Maintaining a Homebrew Tap
+# Maintaining a Homebrew tap
 
 ## Local development setup
 

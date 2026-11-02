@@ -1,4 +1,4 @@
-# Homebrew Tap: `zlliang/tap`
+# Homebrew tap: `zlliang/tap`
 
 Third-party [Homebrew](https://brew.sh/) formulae maintained by [@zlliang](https://github.com/zlliang).
 

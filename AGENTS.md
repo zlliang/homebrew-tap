@@ -1,4 +1,4 @@
-# Homebrew Tap: `zlliang/tap`
+# Homebrew tap: `zlliang/tap`
 
 This repository is a [Homebrew tap](https://docs.brew.sh/Taps) — a third-party formula repository for the [Homebrew](https://brew.sh/) package manager.
 
